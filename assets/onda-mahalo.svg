@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 650" role="img" aria-label="Ilustração artística de sol e onda, universo tropical Mahalo">
+<defs><linearGradient id="s" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff0ab"/><stop offset="1" stop-color="#ffc64b"/></linearGradient><linearGradient id="w" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#91e9ef"/><stop offset="1" stop-color="#1995b8"/></linearGradient></defs>
+<circle cx="365" cy="280" r="215" fill="url(#s)" stroke="#61215f" stroke-width="16"/>
+<path d="M-50 395 C100 278 166 276 275 368 C372 443 431 273 540 279 C640 281 670 364 750 321 L750 700 L-50 700Z" fill="url(#w)" stroke="#61215f" stroke-width="20"/>
+<path d="M-30 510 C80 435 168 445 290 513 C413 573 541 393 739 461" fill="none" stroke="#fff0c5" stroke-width="22" stroke-linecap="round"/>
+<path d="M-30 559 C80 505 145 535 255 585 C389 640 512 482 740 529" fill="none" stroke="#61215f" stroke-width="9" opacity=".7"/>
+<path d="M195 285 c-14 -64 -46 -90 -81 -106 M194 282 c31 -76 66 -94 102 -108 M193 287 c-26 -26 -51 -41 -103 -38 M194 287 c38 -34 66 -39 112 -37" fill="none" stroke="#61215f" stroke-width="13" stroke-linecap="round"/>
+<path d="M190 260 C197 307 200 359 173 412" stroke="#61215f" stroke-width="17" fill="none" stroke-linecap="round"/>
+<path d="M392 112 l-12 -35 M487 150 l33 -20 M556 250 l34 2 M273 109 l-30 -25" stroke="#61215f" stroke-width="9" stroke-linecap="round"/>
+<circle cx="480" cy="295" r="18" fill="#61215f"/><circle cx="516" cy="315" r="13" fill="#61215f"/><circle cx="445" cy="326" r="12" fill="#61215f"/>
+<text x="348" y="395" text-anchor="middle" transform="rotate(-13 348 395)" fill="#61215f" font-family="Georgia,serif" font-size="67" font-weight="bold" font-style="italic">aloha!</text>
+</svg>
