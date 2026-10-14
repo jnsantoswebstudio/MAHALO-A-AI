@@ -1,89 +1,102 @@
-# MAHALO AÇAÍ BOWLS — conceito visual não oficial
+# Mahalo Açaí Bowls — proposta de site v2
 
-**Protótipo de site responsivo desenvolvido para apresentação pela JN Santos Web Studio.**
+**Estudo visual não oficial — JN Santos Web Studio.**
 
-> **IMPORTANTE:** Este é um estudo visual **não aprovado pela Mahalo Açaí Bowls**. Não se apresenta como site oficial, não realiza pagamentos e não reproduz um cardápio validado. Publicar somente como prévia identificada; obtenha autorização antes de transformar em site oficial.
+Este repositório contém um **site estático responsivo real e interativo**, pronto para hospedar no GitHub Pages. É um protótipo para apresentação, ainda **não aprovado pela Mahalo Açaí Bowls**.
 
-![Tela inicial do conceito](preview/01_home_desktop.png)
+> O cardápio oficial da Anota AI exige JavaScript e não foi possível conferir seus produtos/imagens de forma confiável nesta execução. O Instagram oficial também não liberou o acesso às fotografias por automação. Por isso, esta versão utiliza a **logo verdadeira enviada para o projeto**, ilustrações conceituais identificadas como tal e **opções de montagem apenas demonstrativas**. Não estão incluídos fotos oficiais, tamanhos, preços nem adicionais confirmados.
 
-## O que funciona
+## O que foi melhorado
 
-- Menu responsivo e navegação por seções;
-- Catálogo de apresentação com acesso ao **cardápio oficial da Anota AI**;
-- Montador ilustrativo de pedido (tamanhos/adicionais são exemplos **a confirmar**);
-- Carrinho local com quantidades, exclusão de itens e mensagem preparada para o WhatsApp;
-- Formulário que prepara contato no WhatsApp, sem coletar dados em servidor;
-- Links para Instagram e rota no Google Maps;
-- Layout para desktop e celular, sem necessidade de React, Node ou banco de dados.
+- Primeira tela com **copo animado** em vez de tigela. O copo é uma ilustração de produto, a ser substituída por **foto real autorizada**, quando recebida.
+- Cardápio redesenhado com **três abas funcionais**: montar, copos prontos e compra oficial.
+- Chamadas para o **cardápio Anota AI** em destaque em toda a jornada.
+- “Nossa essência” com **logo real da Mahalo** em uma composição mais marcante.
+- “Universo Mahalo” com **galeria ampliável (lightbox)**, além de acesso direto às fotos reais no Instagram e ao WhatsApp.
+- **Montador animado**: cada ingrediente ilustrativo clicado cai visualmente no copo e permanece na composição.
+- Alternância entre montar um copo e consultar os **copos prontos no cardápio oficial**.
+- Carrinho local demonstrativo, seleção de tamanho, quantidade, inclusão/remoção de adicionais e envio de **consulta** ao WhatsApp.
+- Formulário demonstrativo, mapa, navegação para celular e acessibilidade básica.
 
-**O carrinho não cobra e não confirma compras.** O pedido no WhatsApp informa que as escolhas são ilustrativas e pede confirmação de valores/disponibilidade. As fotografias reais, produtos, preços, opções de adicionais, endereço detalhado e horários precisam ser confirmados pela empresa.
+**Importante:** nenhum pedido é confirmado ou cobrado no protótipo. A Anota AI não recebe os itens do carrinho do site: a compra oficial é feita diretamente na plataforma da empresa. Os itens do carrinho experimental podem gerar apenas uma mensagem de **consulta** por WhatsApp com ressalva explícita de que são exemplos.
 
-## Estrutura do repositório
+## Estrutura
 
-```text
-mahalo-acai-bowls/
-├── index.html                 # Página completa, CSS e JavaScript
+```
+MAHALO_GITHUB_V2/
+├── index.html
+├── styles.css
+├── app.js
 ├── assets/
-│   ├── mahalo-logo.png       # Logo fornecido para a apresentação
-│   ├── bowl-conceitual.svg   # Ilustração conceitual, não foto real
-│   └── onda-mahalo.svg       # Elemento gráfico
-├── preview/                  # Capturas reais do protótipo
+│   ├── mahalo-logo.png           # Logo original enviada pelo usuário, recortada em círculo
+│   └── copo-conceitual.svg       # Arte ilustrativa editável, não fotografia
+├── preview/                     # Capturas verdadeiras no Chromium
 ├── .github/workflows/
-│   └── deploy-pages.yml      # Publicação automática no GitHub Pages
-├── .gitignore
+│   └── deploy-pages.yml          # Deploy automático no GitHub Pages
 ├── .nojekyll
+├── .gitignore
 └── README.md
 ```
 
-## Como colocar no GitHub (sem terminal)
+## Como publicar no GitHub
 
-1. No GitHub, crie um repositório, por exemplo **`mahalo-acai-bowls`**. Recomendo mantê-lo **privado** enquanto você obtém autorização para uma prévia pública.
-2. Descompacte o arquivo `MAHALO_GITHUB_PRONTO.zip` no computador.
-3. Dentro do novo repositório, escolha **Add file → Upload files**. Arraste **todo o conteúdo de dentro da pasta `MAHALO_GITHUB`**, incluindo `index.html`, `assets`, `preview` e `.github`. Não envie somente o HTML nem deixe todos os arquivos dentro de uma pasta adicional.
-4. Salve com **Commit changes** na branch `main`.
-5. Vá em **Settings → Pages → Build and deployment → Source** e escolha **GitHub Actions**.
-6. Em **Actions**, abra o fluxo **Publicar demonstração no GitHub Pages**. Se necessário, clique em **Run workflow**. Depois do primeiro deploy, as alterações enviadas para `main` serão publicadas automaticamente.
-7. A URL terá o formato `https://SEU_USUARIO.github.io/mahalo-acai-bowls/` (exemplo de formato, **não é um link ativo deste projeto**).
+1. Crie um repositório no GitHub chamado, por exemplo, **`mahalo-acai-bowls`**.
+2. Extraia o arquivo ZIP e **envie o conteúdo da pasta extraída para a raiz do repositório** — não somente o ZIP e não dentro de uma subpasta extra.
+3. Confirme que na raiz estão `index.html`, `styles.css`, `app.js`, `assets/` e `.github/`.
+4. Abra **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+5. Faça um commit na branch `main` ou vá em **Actions → Publicar demonstração no GitHub Pages → Run workflow**.
+6. O endereço normalmente terá o formato `https://SEU-USUARIO.github.io/mahalo-acai-bowls/`.
 
-> A disponibilidade de GitHub Pages para repositórios privados depende das permissões/plano do GitHub. Em muitos casos, uma demonstração GitHub Pages será **publicamente acessível**. O marcador `noindex` ajuda a não aparecer em mecanismos de busca, mas **não protege o acesso**. Não publique a prévia sem avaliar isso.
+O endereço acima é apenas um **formato ilustrativo**, não uma publicação efetuada por este pacote. O deploy não será feito sem acesso/autorização ao seu GitHub.
 
-### Pelo terminal (alternativa)
+> GitHub Pages pode tornar uma demonstração publicamente acessível; repositório privado e `noindex` **não substituem controle de acesso**. Recomenda-se aprovação da Mahalo para divulgação pública. Enquanto isso, use o ZIP ou rode localmente.
 
-Crie primeiro um repositório **vazio** no GitHub, sem README automático, e execute **dentro da pasta extraída**:
+## Visualizar localmente
 
-```bash
-git init
-git add .
-git commit -m "Adiciona prototipo Mahalo Acai Bowls"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/mahalo-acai-bowls.git
-git push -u origin main
-```
-
-Depois habilite **Settings → Pages → GitHub Actions**.
-
-## Visualizar antes de publicar
-
-Abra `index.html` com o navegador. Para simular um servidor local:
+Abra `index.html` num navegador moderno. Alternativamente, dentro da pasta, use:
 
 ```bash
 python -m http.server 8000
 ```
 
-Acesse `http://localhost:8000/`.
+E visite `http://localhost:8000`.
 
-## Pontos a validar com a Mahalo antes da versão final
+## Para colocar as fotos oficiais
 
-- [ ] Autorização para uso público da marca e publicação da prévia;
-- [ ] Cardápio: produtos, tamanhos, adicionais, preços e disponibilidade;
-- [ ] Fotos oficiais dos produtos e do estabelecimento;
-- [ ] Localização completa, horário e bairros/condições de entrega;
-- [ ] Responsável pelo recebimento das mensagens do WhatsApp;
-- [ ] Textos definitivos, informações legais e política de privacidade;
-- [ ] Domínio definitivo, hospedagem, configurações de analytics e SEO.
+Solicite à equipe Mahalo autorização e os arquivos originais (JPG/WebP). Depois de inserir as imagens em `assets/`:
 
-**SEO:** este protótipo contém `<meta name="robots" content="noindex, nofollow, noarchive">`, por ser **não oficial**. Remova essa linha apenas quando o projeto estiver aprovado para publicação definitiva.
+- **Copo do topo:** em `index.html`, encontre a classe `hero-cup` e substitua o caminho `assets/copo-conceitual.svg` por uma fotografia recortada com fundo transparente, mantendo `alt` apropriado.
+- **Copo do montador:** em `index.html`, encontre `id="builderCup"` e atualize a imagem. Uma fotografia com perspectiva frontal e espaço para os elementos sobrepostos funciona melhor.
+- **Produtos:** substitua os componentes gráficos de `catalog-grid` pelas fotos e nomes autorizados do cardápio.
+- **Galeria:** substitua os arquivos dos botões `data-gallery="logo"` e `data-gallery="cup"` pelo conteúdo licenciado. Atualize também o objeto `galleries` em `app.js` para a função ampliar abrir a mesma foto.
+- **Nossa essência:** a versão atual já privilegia a logo real; se for usar uma foto da loja, peça aprovação e adapte a composição para não simular embalagem/produto diferente do real.
 
-## Direitos e responsabilidade
+## Para atualizar os adicionais reais
 
-Conceito visual não oficial — JN Santos Web Studio. A marca e identidade Mahalo são de seus respectivos titulares. O material é destinado à negociação e demonstração, não à representação como canal oficial de vendas.
+Em `app.js`, encontre a lista `EXAMPLE_INGREDIENTS`. Somente quando receber o cardápio oficial, substitua-a pelos nomes autorizados e ajuste textos em `index.html` que dizem **exemplo/ilustrativo**. Para alterar tamanhos, atualize os botões `data-size` e a seleção padrão `selectedSize` do JavaScript. Depois, revise as mensagens de WhatsApp, preços e a disponibilidade com o cliente.
+
+**Não declare integração automática Anota AI sem autenticação/API e autorização do estabelecimento.** A documentação pública de integração da Anota AI menciona autenticação Bearer e identificador de página para operações de cardápio.
+
+## Verificação realizada
+
+- Abertura e renderização nos tamanhos **1440 × 900** e **390 × 844**;
+- Sem overflow horizontal nos dois tamanhos;
+- Abas do cardápio e alternância dos modos de montagem;
+- Seleção de ingredientes com renderização no copo;
+- Seleção de tamanho, quantidade, carrinho, remoção e fechamento;
+- Galeria com abertura e fechamento;
+- Menu mobile, links relativos e JavaScript sem erros de execução durante os testes.
+
+Os testes foram executados carregando o HTML/CSS/JS e as imagens no navegador Chromium. Os serviços externos (Instagram, Anota AI, Maps, WhatsApp) requerem conexão à internet para carregar na versão publicada.
+
+## Antes de virar site oficial
+
+- [ ] Autorização formal para publicar a marca e as fotos;
+- [ ] Fotografias reais da loja, do açaí e dos copos prontos;
+- [ ] Tamanhos, complementos, sabores e preços conferidos na Anota AI;
+- [ ] Endereço, horários, entrega/retirada, política comercial;
+- [ ] Confirmação de WhatsApp, domínio e permissões de integração;
+- [ ] Remover a tag `noindex` apenas após aprovação e revisão final;
+- [ ] Políticas de privacidade, acessibilidade e desempenho em produção.
+
+**Conceito visual não oficial — JN Santos Web Studio.**
