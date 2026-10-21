@@ -1,0 +1,194 @@
+{
+  "version": 3,
+  "brand": {
+    "name": "Mahalo Açaí Bowls",
+    "phone": "5521975951272",
+    "instagram": "https://www.instagram.com/mahaloacaibowls/",
+    "anota": "https://pedido.anota.ai/loja/mahalo-aa-bowls",
+    "map": "https://www.google.com/maps/search/?api=1&query=-22.97179%2C-43.04440",
+    "mapEmbed": "https://maps.google.com/maps?q=-22.97179,-43.04440&z=15&output=embed",
+    "address": "Itaipu, Niterói — RJ",
+    "heroTitle": "O lado bom do seu dia.",
+    "heroSubtitle": "Açaí orgânico, sem conservantes e aditivos químicos. Conheça a Mahalo e monte seu pedido.",
+    "essenceTitle": "Natural de verdade. Com a energia da Mahalo.",
+    "essenceText": "Açaí orgânico, banana como espessante natural e sabores com tâmara, guaraná ou melado de cana. Toppings enviados separadamente.",
+    "universeTitle": "O universo Mahalo, de perto.",
+    "universeText": "Conheça os detalhes da marca, acompanhe os momentos da loja e descubra as novidades nos nossos canais.",
+    "footerCredit": "Desenvolvido por JN Santos Web Studio",
+    "logo": "assets/mahalo-logo.png",
+    "heroImage": "assets/copo-conceitual.svg",
+    "essenceImage": "assets/mahalo-logo.png",
+    "colors": {
+      "yellow": "#ffc84b",
+      "purple": "#592159",
+      "aqua": "#39c6d6"
+    }
+  },
+  "rules": {
+    "freeToppings": 2,
+    "maxToppings": 10,
+    "maxPerTopping": 10
+  },
+  "products": [
+    {
+      "id": "tigela-250-tamara",
+      "name": "Açaí tigela 250ml batido com tâmara",
+      "price": 17.97,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + tâmara. Sem conservantes e aditivos químicos; banana como espessante natural.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "acai-500-tamara",
+      "name": "Açaí 500ml batido com tâmara",
+      "price": 28.3,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + tâmara. Composição a confirmar: a descrição recebida menciona guaraná, apesar do nome do produto indicar tâmara.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "tigela-250-guarana",
+      "name": "Açaí tigela 250ml batido com guaraná",
+      "price": 13.77,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + guaraná. Sem conservantes e aditivos químicos; banana como espessante natural.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "acai-500-melado",
+      "name": "Açaí 500ml batido com melado de cana",
+      "price": 26.39,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + melado de cana. Sem conservantes e aditivos químicos.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "tigela-250-melado",
+      "name": "Açaí tigela 250ml batido com melado de cana",
+      "price": 16.06,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + melado de cana. Sem conservantes e aditivos químicos.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "tigela-500-guarana",
+      "name": "Açaí tigela 500ml batido com guaraná",
+      "price": 23.71,
+      "category": "tigelas",
+      "description": "Açaí orgânico + banana + guaraná. Sem conservantes e aditivos químicos.",
+      "image": "",
+      "active": true,
+      "toppings": true
+    },
+    {
+      "id": "suco-abacaxi",
+      "name": "Suco de açaí com abacaxi 300ml",
+      "price": 14.91,
+      "category": "sucos",
+      "description": "Açaí na garrafa 300ml, com água de coco e levemente adoçado com melado de cana.",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202507051508_Y6EP_blob",
+      "active": true,
+      "toppings": false
+    },
+    {
+      "id": "suco-maracuja",
+      "name": "Suco de açaí com maracujá 300ml",
+      "price": 14.91,
+      "category": "sucos",
+      "description": "Açaí na garrafa 300ml, com água de coco e levemente adoçado com melado de cana.",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202507051510_W44R_blob",
+      "active": true,
+      "toppings": false
+    },
+    {
+      "id": "melado-500",
+      "name": "Melado de cana puro 500ml",
+      "price": 15.3,
+      "category": "melado",
+      "description": "Melado de cana puro, feito artesanalmente, sem aditivos e conservantes.",
+      "image": "",
+      "active": true,
+      "toppings": false
+    }
+  ],
+  "toppings": [
+    {
+      "id": "farofa",
+      "name": "Farofa de amendoim 30g",
+      "extraPrice": 1.99,
+      "emoji": "🥜",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202510151850_L83G_blob",
+      "active": true
+    },
+    {
+      "id": "banana",
+      "name": "Banana 30g",
+      "extraPrice": null,
+      "emoji": "🍌",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202504131005_294I_blob",
+      "active": true
+    },
+    {
+      "id": "morango",
+      "name": "Morango 30g",
+      "extraPrice": null,
+      "emoji": "🍓",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202504131024_7N51_blob",
+      "active": true
+    },
+    {
+      "id": "granola",
+      "name": "Granola 30g",
+      "extraPrice": null,
+      "emoji": "🌾",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202506070124_OG12_blob",
+      "active": true
+    },
+    {
+      "id": "castanha",
+      "name": "Pasta de castanha 30g",
+      "extraPrice": 2.99,
+      "emoji": "🥜",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202510151853_5TTX_blob",
+      "active": true
+    },
+    {
+      "id": "amendoim",
+      "name": "Pasta de amendoim 30g",
+      "extraPrice": 1.99,
+      "emoji": "🥜",
+      "image": "https://client-assets.anota.ai/produtos/67b388894f1da70012bb711d/202510151852_13PG_blob",
+      "active": true
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Nossa marca",
+      "caption": "Identidade da Mahalo",
+      "image": "assets/mahalo-logo.png",
+      "url": "https://www.instagram.com/mahaloacaibowls/"
+    },
+    {
+      "title": "Copo Mahalo",
+      "caption": "Fotografia oficial a inserir",
+      "image": "",
+      "url": "https://www.instagram.com/mahaloacaibowls/"
+    },
+    {
+      "title": "Nossa loja",
+      "caption": "Fotografia da loja a inserir",
+      "image": "",
+      "url": "https://www.instagram.com/mahaloacaibowls/"
+    }
+  ]
+}

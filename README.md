@@ -1,102 +1,79 @@
-# Mahalo Açaí Bowls — proposta de site v2
+# Mahalo Açaí Bowls — site + editor de conteúdo
 
-**Estudo visual não oficial — JN Santos Web Studio.**
+Projeto da JN Santos Web Studio, atualizado com as informações de cardápio fornecidas em 21/10/2026.
 
-Este repositório contém um **site estático responsivo real e interativo**, pronto para hospedar no GitHub Pages. É um protótipo para apresentação, ainda **não aprovado pela Mahalo Açaí Bowls**.
+## O que está pronto
 
-> O cardápio oficial da Anota AI exige JavaScript e não foi possível conferir seus produtos/imagens de forma confiável nesta execução. O Instagram oficial também não liberou o acesso às fotografias por automação. Por isso, esta versão utiliza a **logo verdadeira enviada para o projeto**, ilustrações conceituais identificadas como tal e **opções de montagem apenas demonstrativas**. Não estão incluídos fotos oficiais, tamanhos, preços nem adicionais confirmados.
+- Site responsivo em HTML, CSS e JavaScript, sem framework ou build obrigatório.
+- Home com animação do copo de açaí, identidade Mahalo e CTA para o Anota AI.
+- Catálogo com **9 itens**: 6 tigelas/açaís, 2 sucos e 1 melado, com preços recebidos.
+- **6 complementos**, com limites configuráveis e até **2 acompanhamentos gratuitos**, conforme texto recebido.
+- Formulário de personalização por produto, observações, quantidade, carrinho e mensagem pronta no WhatsApp (não há pagamento na página).
+- Montador animado com os **ícones visuais clássicos da V2** para os ingredientes, novamente contidos dentro do copo (sem os chips circulares de fotos da V3).
+- Galeria, logo, essência, Instagram, WhatsApp, mapa e formulário de contato.
+- Área `admin.html` para editar produtos, complementos, textos, links, imagens, galeria, preços, visibilidade, cores e regras.
+- Arquivo de conteúdo `site-data.js`, separando dados comerciais do código. Publicação automática via GitHub Actions/Pages.
 
-## O que foi melhorado
+## Arquivos
 
-- Primeira tela com **copo animado** em vez de tigela. O copo é uma ilustração de produto, a ser substituída por **foto real autorizada**, quando recebida.
-- Cardápio redesenhado com **três abas funcionais**: montar, copos prontos e compra oficial.
-- Chamadas para o **cardápio Anota AI** em destaque em toda a jornada.
-- “Nossa essência” com **logo real da Mahalo** em uma composição mais marcante.
-- “Universo Mahalo” com **galeria ampliável (lightbox)**, além de acesso direto às fotos reais no Instagram e ao WhatsApp.
-- **Montador animado**: cada ingrediente ilustrativo clicado cai visualmente no copo e permanece na composição.
-- Alternância entre montar um copo e consultar os **copos prontos no cardápio oficial**.
-- Carrinho local demonstrativo, seleção de tamanho, quantidade, inclusão/remoção de adicionais e envio de **consulta** ao WhatsApp.
-- Formulário demonstrativo, mapa, navegação para celular e acessibilidade básica.
+- `index.html`: site público.
+- `styles.css` e `modern.css`: estilos do site.
+- `app.js`: catálogo, montador, carrinho, contato e interações.
+- `site-data.js`: **arquivo publicado com todo o conteúdo editável**.
+- `site-data.json`: cópia inicial de referência (não é lida pelo site; não sincroniza automaticamente com o JS).
+- `admin.html`, `admin.css`, `admin.js`: editor visual local.
+- `assets/`: logo e copo ilustrado; substitua as artes pelas fotos autorizadas, ou use o editor.
+- `.github/workflows/deploy-pages.yml`: GitHub Pages.
+- `preview_final/`: imagens reais de teste obtidas em navegador (podem ser removidas do repositório).
 
-**Importante:** nenhum pedido é confirmado ou cobrado no protótipo. A Anota AI não recebe os itens do carrinho do site: a compra oficial é feita diretamente na plataforma da empresa. Os itens do carrinho experimental podem gerar apenas uma mensagem de **consulta** por WhatsApp com ressalva explícita de que são exemplos.
+## Subir no GitHub Pages
 
-## Estrutura
+1. Crie um repositório (por exemplo, `mahalo-acai-bowls`).
+2. Extraia o ZIP e envie **todo o conteúdo da pasta extraída para a raiz** do repositório, incluindo `.github/` e `site-data.js`.
+3. Em **Settings → Pages**, altere **Source** para `GitHub Actions`.
+4. Faça o commit na branch `main`; o workflow publica os arquivos estáticos.
+5. Visite `https://SEU-USUARIO.github.io/mahalo-acai-bowls/` depois da publicação. O link é ilustrativo; ainda não foi publicado por esta entrega.
 
-```
-MAHALO_GITHUB_V2/
-├── index.html
-├── styles.css
-├── app.js
-├── assets/
-│   ├── mahalo-logo.png           # Logo original enviada pelo usuário, recortada em círculo
-│   └── copo-conceitual.svg       # Arte ilustrativa editável, não fotografia
-├── preview/                     # Capturas verdadeiras no Chromium
-├── .github/workflows/
-│   └── deploy-pages.yml          # Deploy automático no GitHub Pages
-├── .nojekyll
-├── .gitignore
-└── README.md
-```
+**Autorização:** obtenha aprovação da empresa para exibir o site publicamente. O projeto mantém `noindex` enquanto isso não ocorrer.
 
-## Como publicar no GitHub
+## Como usar o administrador
 
-1. Crie um repositório no GitHub chamado, por exemplo, **`mahalo-acai-bowls`**.
-2. Extraia o arquivo ZIP e **envie o conteúdo da pasta extraída para a raiz do repositório** — não somente o ZIP e não dentro de uma subpasta extra.
-3. Confirme que na raiz estão `index.html`, `styles.css`, `app.js`, `assets/` e `.github/`.
-4. Abra **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-5. Faça um commit na branch `main` ou vá em **Actions → Publicar demonstração no GitHub Pages → Run workflow**.
-6. O endereço normalmente terá o formato `https://SEU-USUARIO.github.io/mahalo-acai-bowls/`.
+1. Abra `admin.html` pelo navegador (na mesma pasta do site).
+2. Use as abas para modificar marca, textos, links, cores, catálogo, fotos e regras.
+3. Clique em **Salvar prévia**; ao abrir `index.html` **no mesmo navegador** verá os novos dados por meio do armazenamento local (quando permitido).
+4. Para **publicar para todo mundo**, clique em **Exportar e publicar → Baixar site-data.js**.
+5. Substitua `site-data.js` no repositório GitHub e confirme o commit; o workflow atualiza o site online.
+6. Faça também um backup pelo botão **Backup JSON**.
 
-O endereço acima é apenas um **formato ilustrativo**, não uma publicação efetuada por este pacote. O deploy não será feito sem acesso/autorização ao seu GitHub.
+O painel **NÃO É um CMS remoto autenticado**. O GitHub Pages é hospedagem estática: alterações feitas no navegador não ficam disponíveis para outros visitantes até o arquivo ser publicado no repositório. O painel não armazena senhas nem tokens. Para oferecer login seguro e gravação/publicação automática pela internet, é necessário instalar um backend/CMS com autenticação e provedor de hospedagem compatível. Não coloque senha do admin ou token do GitHub em JavaScript público.
 
-> GitHub Pages pode tornar uma demonstração publicamente acessível; repositório privado e `noindex` **não substituem controle de acesso**. Recomenda-se aprovação da Mahalo para divulgação pública. Enquanto isso, use o ZIP ou rode localmente.
+## Imagens e dados pendentes
 
-## Visualizar localmente
+- **Fotos oficiais** das 6 tigelas de açaí, da loja e da galeria do Universo Mahalo. No lugar são mostrados espaços estilizados. O copo animado é uma ilustração, não uma foto real.
+- Os 6 links dos complementos e 2 links dos sucos são os que foram enviados pelo solicitante, hospedados em `client-assets.anota.ai`. A disponibilidade futura desses links depende do provedor. Para evitar perder as fotos, peça autorização e salve imagens otimizadas em `assets/` na versão definitiva.
+- **Conferir** a composição do açaí 500ml *batido com tâmara*: nome contém tâmara, mas descrição recebida cita guaraná. O site identifica a divergência.
+- **Preço extra a confirmar** de banana, morango e granola quando excederem os 2 acompanhamentos gratuitos: não foram fornecidos. No site, o subtotal é considerado mínimo se houver esses extras.
+- **Validar regra comercial dos 2 acompanhamentos gratuitos** versus preços adicionais informados: a implementação conta os primeiros dois como gratuitos e aplica os preços extra divulgados às unidades além disso. Essa interpretação deve ser aprovada antes da venda real.
+- Confirmar endereço completo, horários e regras de entrega/retirada. O link de mapa usa coordenadas fornecidas.
 
-Abra `index.html` num navegador moderno. Alternativamente, dentro da pasta, use:
+## Compra e privacidade
 
-```bash
-python -m http.server 8000
-```
+O carrinho é armazenado apenas no navegador do cliente (`localStorage`). A finalização **abre uma mensagem para o WhatsApp**, onde a equipe confirma disponibilidade, preço final e condições de atendimento. O botão Anota AI abre o catálogo oficial. Não há integração de API de catálogo, estoque ou pagamentos com Anota AI, nem backend de pedidos.
 
-E visite `http://localhost:8000`.
+## Testes
 
-## Para colocar as fotos oficiais
+Sintaxe JavaScript validada com Node.js. Testes interativos realizados em Chromium com conteúdo local inline para conferir produtos, modal, carrinho, montador e dashboard, além de verificação de largura mobile. Fotografias externas podem não aparecer no ambiente de teste por bloqueios de rede; os links fornecidos são mantidos no site.
 
-Solicite à equipe Mahalo autorização e os arquivos originais (JPG/WebP). Depois de inserir as imagens em `assets/`:
+## Alteração pontual — retorno do montador clássico
 
-- **Copo do topo:** em `index.html`, encontre a classe `hero-cup` e substitua o caminho `assets/copo-conceitual.svg` por uma fotografia recortada com fundo transparente, mantendo `alt` apropriado.
-- **Copo do montador:** em `index.html`, encontre `id="builderCup"` e atualize a imagem. Uma fotografia com perspectiva frontal e espaço para os elementos sobrepostos funciona melhor.
-- **Produtos:** substitua os componentes gráficos de `catalog-grid` pelas fotos e nomes autorizados do cardápio.
-- **Galeria:** substitua os arquivos dos botões `data-gallery="logo"` e `data-gallery="cup"` pelo conteúdo licenciado. Atualize também o objeto `galleries` em `app.js` para a função ampliar abrir a mesma foto.
-- **Nossa essência:** a versão atual já privilegia a logo real; se for usar uma foto da loja, peça aprovação e adapte a composição para não simular embalagem/produto diferente do real.
+A apresentação dos ingredientes **na seção Monte seu pedido** voltou ao estilo visual da V2 (ícones coloridos, sem fichas redondas). As fotos dos complementos continuam disponíveis no catálogo/modal e no painel; as regras de preços, produtos e carrinho não foram alteradas.
 
-## Para atualizar os adicionais reais
+## Acesso rápido — onde fica o administrador?
 
-Em `app.js`, encontre a lista `EXAMPLE_INGREDIENTS`. Somente quando receber o cardápio oficial, substitua-a pelos nomes autorizados e ajuste textos em `index.html` que dizem **exemplo/ilustrativo**. Para alterar tamanhos, atualize os botões `data-size` e a seleção padrão `selectedSize` do JavaScript. Depois, revise as mensagens de WhatsApp, preços e a disponibilidade com o cliente.
+**Abra `INICIAR_AQUI.html`**, e escolha **Abrir administrador** (que leva a `admin.html`).
+Esse arquivo é um menu de uso da JN Santos, não é enviado ao GitHub Pages pelo workflow.
+Em um repositório Pages publicado, `admin.html` também existe no mesmo caminho do site, mas **não tem login**: é um editor de conteúdo e exporta os dados para atualização via commit no GitHub. Não confunda com um CMS autenticado. Não compartilhe esse endereço como interface segura.
 
-**Não declare integração automática Anota AI sem autenticação/API e autorização do estabelecimento.** A documentação pública de integração da Anota AI menciona autenticação Bearer e identificador de página para operações de cardápio.
+O painel só visualiza alterações no site quando ambos são abertos na mesma origem do navegador (por exemplo, site e admin na mesma hospedagem/servidor). Abrir cada HTML isolado em visualizadores diferentes pode impedir o compartilhamento da prévia. O backup JSON e o arquivo `site-data.js` exportado funcionam sem essa dependência.
 
-## Verificação realizada
-
-- Abertura e renderização nos tamanhos **1440 × 900** e **390 × 844**;
-- Sem overflow horizontal nos dois tamanhos;
-- Abas do cardápio e alternância dos modos de montagem;
-- Seleção de ingredientes com renderização no copo;
-- Seleção de tamanho, quantidade, carrinho, remoção e fechamento;
-- Galeria com abertura e fechamento;
-- Menu mobile, links relativos e JavaScript sem erros de execução durante os testes.
-
-Os testes foram executados carregando o HTML/CSS/JS e as imagens no navegador Chromium. Os serviços externos (Instagram, Anota AI, Maps, WhatsApp) requerem conexão à internet para carregar na versão publicada.
-
-## Antes de virar site oficial
-
-- [ ] Autorização formal para publicar a marca e as fotos;
-- [ ] Fotografias reais da loja, do açaí e dos copos prontos;
-- [ ] Tamanhos, complementos, sabores e preços conferidos na Anota AI;
-- [ ] Endereço, horários, entrega/retirada, política comercial;
-- [ ] Confirmação de WhatsApp, domínio e permissões de integração;
-- [ ] Remover a tag `noindex` apenas após aprovação e revisão final;
-- [ ] Políticas de privacidade, acessibilidade e desempenho em produção.
-
-**Conceito visual não oficial — JN Santos Web Studio.**
+**Aprimoramento desta revisão:** a imagem principal do copo e o logotipo editados no painel agora também são aplicados na galeria e no montador; a incorporação do mapa tem campo próprio.
